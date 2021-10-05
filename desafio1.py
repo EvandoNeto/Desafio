@@ -1,4 +1,4 @@
-""" Etapa 1"""
+""" Etapa 1 """
 
 link = "https://github.com/pixies/devinf/releases/tag/db-base-v1.1"
 
@@ -12,3 +12,5 @@ def retonar(lista_link):
     versao = lista_link[qntd]
     user = lista_link[3,4]
     return versao,user
+
+""" Etapa 2 """
