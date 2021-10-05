@@ -1,3 +1,5 @@
+""" Etapa 1"""
+
 link = "https://github.com/pixies/devinf/releases/tag/db-base-v1.1"
 
 def repartir(link):
