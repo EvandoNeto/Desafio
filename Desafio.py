@@ -1,8 +1,8 @@
 import requests
 import sys
 
-usuario = 'pixies'
-repositorio = 'calculadora-teste-py'
+usuario = 'EvandoNeto'
+repositorio = 'super-calculadora'
 
 def versao_repositorio_link(usuario, repositorio):
     url = 'https://github.com/' + usuario + '/' + repositorio + '/releases/latest'
