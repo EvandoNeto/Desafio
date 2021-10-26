@@ -1,18 +1,14 @@
 import requests
+import sys
 
-user = 'pixies'
-rep = 'calculadora-teste-py'
+usuario = 'pixies'
+repositorio = 'calculadora-teste-py'
 
-def separa_link(user,rep):
-    url = 'https://github.com/' + user + '/' + rep + '/releases/latest'
+def versao_repositorio_link(usuario, repositorio):
+    url = 'https://github.com/' + usuario + '/' + repositorio + '/releases/latest'
+    req = requests.get(url).url.split('https://')[1]
     # https://github.com/pixies/calculadora-teste-py/releases/tag/v1.1
-    sep_host = requests.get(url).url.split('https://')
-    div = sep_host[1].split('/')
-    return div
+    host, usuario, repositorio, releases, tag, versao, = req.split('/')
+    return {'usuario': usuario, 'repositorio': repositorio, 'versao': versao }
 
-def indica_link(div):
-    host = div[0]
-    usuario = div[1]
-    repositorio = div[2]
-    versao = div[4]
-    return host, usuario, repositorio, versao
+print(versao_repositorio_link(usuario,repositorio))
